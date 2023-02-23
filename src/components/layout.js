@@ -1,15 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { Link } from "gatsby";
 import Header from "./header"
-import "./layout.css"
+import "../styles/layout.css"
+import '../styles/Menu.css'; // import the stylesheet for the menu
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,6 +26,27 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
+
+        <nav className="navbar" id="menu_side">
+          <ul>
+            <li>
+              <Link to="/projects/" className="option">Projects</Link>
+            </li>
+            <li>
+              <Link to="/languages/" className="option">Your language</Link>
+            </li>
+            <li>
+              <Link to="/contact/" className="option">Contact</Link>
+            </li>
+            <li>
+              <Link to="/terms/" className="option">Terms</Link>
+            </li>
+            <li>
+              <Link to="/privacy/" className="option">Privacy Statements</Link>
+            </li>
+          </ul>
+        </nav>
+
         <main>{children}</main>
         <footer
           style={{
@@ -39,13 +54,17 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
+
           © {new Date().getFullYear()} &middot; Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="">Scrum4u</a>
         </footer>
       </div>
+
+  
+
     </>
   )
 }
-
+<><script src="js/boton.js"></script><script src="js/menu.js"></script></>
 export default Layout
