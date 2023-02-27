@@ -4,20 +4,17 @@ import { BreadcrumbsProvider, Breadcrumbs, BreadcrumbsItem } from "react-breadcr
 import "../styles/Header.css"
 const Header = () => {
   return (
-    <BreadcrumbsProvider>
+  
       <nav className="header">
-        <Breadcrumbs
-          separator=
-          {<i className="fa fa-angle-right">
-            <BreadcrumbsItem to="/">Home</BreadcrumbsItem>
-            <BreadcrumbsItem to="/projects">Projects</BreadcrumbsItem>
-            <BreadcrumbsItem to="/yourlanguage">Your Language</BreadcrumbsItem>
-          </i>}
-          finalItem={"b"}
-          className="breadcrumbs"
-        />
+      <div className="language-menu">
+          <ul>
+            <li>English</li>
+            <li>Español</li>
+            <li>Français</li>
+          </ul>
+        </div>
       </nav>
-    </BreadcrumbsProvider>
+
   )
 }
 

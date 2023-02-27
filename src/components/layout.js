@@ -24,16 +24,18 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
+          position: `'absolute',`
         }}
       >
 
         <nav className="navbar" id="menu_side">
+          <br></br> <br></br>
           <ul>
             <li>
               <Link to="/projects/" className="option">Projects</Link>
             </li>
             <li>
-              <Link to="/languages/" className="option">Your language</Link>
+              <Link to="/yourlanguage/" className="option">Your language</Link>
             </li>
             <li>
               <Link to="/contact/" className="option">Contact</Link>
@@ -50,6 +52,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer
           style={{
+            marginLeft: `150px`,
             marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
           }}

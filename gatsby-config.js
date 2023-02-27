@@ -7,6 +7,7 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -15,12 +16,12 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    
+
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
 
     'gatsby-plugin-postcss',
-       
+
     'gatsby-plugin-image',
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,18 +33,29 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: `gatsby-starter-default`,
+          short_name: `starter`,
+          start_url: `/`,
+          background_color: `#663399`,
+          // This will impact how browsers show your PWA/website
+          // https://css-tricks.com/meta-theme-color-and-trickery/
+          // theme_color: `#663399`,
+          display: `minimal-ui`,
+          icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        },
+      }
+    ],
+  { siteMetadata: {
+    title: "My Gatsby Site",
+  },
+  plugins: [
+    // other plugins...
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/contact/*`] },
     },
   ],
-}
+  
+  }

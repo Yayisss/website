@@ -4,6 +4,7 @@
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+  margin-left: 150px;
 }
 
 .title {
@@ -12,16 +13,32 @@
   margin-bottom: 10px;
 }
 
-.content {
-  font-size: 16px;
+.asomate {
+  text-align: center;
+  margin-left: 150px;
 }
 
+.patos_lugar{
+  margin-left: 150px;
+  background-color: #8eb814;
+}
+
+.content {
+  font-size: 16px;
+  margin-left: 150px;
+}
+
+.ajuste {
+  text-align: center;
+  margin-left: 150px;
+}
 
 .list {
   padding: 40px;
   max-width: 800px;
   display:inline-flex;
   margin: 0;
+  margin-left: 150px;
   /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
   --w: 280px;
   --n: 2;

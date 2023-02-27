@@ -1,50 +1,27 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
+import React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import styles from "/src/components/other-apps.module.css"
 
-const UsingSSR = ({ serverData }) => {
+const OtherApps = () => {
   return (
     <Layout>
-      <h1>
-        This page is <b>otherapps</b>
-      </h1>
-
-      <img
-        style={{ width: "320px", borderRadius: "var(--border-radius)" }}
-        alt="A random dog"
-        src={serverData.message}
-      />
-      <p>
-        This page is rendered server side every time the page is requested.
-        Reload it to see a(nother) random photo from{" "}
-        <code>dog.ceo/api/breed/shiba/images/random</code>:
-      </p>
-
-      <Link to="/">Go back to the homepage</Link>
+      <div className={styles.container}>
+        <h1>Other Apps</h1>
+        <p>Check out our other apps:</p>
+        <ul className={styles.appList}>
+          <li>
+            <a href="#">App 1</a>
+          </li>
+          <li>
+            <a href="#">App 2</a>
+          </li>
+          <li>
+            <a href="#">App 3</a>
+          </li>
+        </ul>
+      </div>
     </Layout>
   )
 }
 
-export const Head = () => <Seo title="Using SSR" />
-
-export default UsingSSR
-
-export async function getServerData() {
-  try {
-    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
-    if (!res.ok) {
-      throw new Error(`Response failed`)
-    }
-    return {
-      props: await res.json(),
-    }
-  } catch (error) {
-    return {
-      status: 500,
-      headers: {},
-      props: {},
-    }
-  }
-}
+export default OtherApps

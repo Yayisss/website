@@ -5,6 +5,20 @@ import * as styles from "../components/index.module.css"
 import Header from "../components/header"
 import InfoContainer from "../components/InfoCont"
 import { Breadcrumbs } from "react-breadcrumbs-dynamic"
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import Register from "../components/Register"
+
+
+
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
 
 const links = [
   {
@@ -58,39 +72,40 @@ const samplePageLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
-  <Header>
-    <Breadcrumbs/>
-    <div className={styles.textCenter}>
-
-      <h1 className="header/scrum">
-        Welcome to <b>Scrum4u!</b>
-      </h1>
-
-    </div>
-    <div>
-      <h1>Página de Patos</h1>
-      <InfoContainer/>
-    </div>
-
-  </Header>,
-
-  <Layout>
-    
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-
-  </Layout>
+  (
+    <Header>
+      <Breadcrumbs />,
+      
+    </Header>
+  ),
+  <div className="ajuste" >
+        <h1 className="asomate">
+          Welcome to <b>Scrum4u!</b>
+        </h1>
+      </div>,
+  (
+  
+    <Layout>
+      <ul className={styles.list}>
+        {links.map(link => (
+          <li key={link.url} className={styles.listItem}>
+            <a
+              className={styles.listItemLink}
+              href={`${link.url}${utmParameters}`}
+            >
+              {link.text} ↗
+            </a>
+            <p className={styles.listItemDescription}>{link.description}</p>
+          </li>
+        ))}
+      </ul>
+      
+      <div className="patos_lugar">
+        <h1>Página de Patos</h1>
+        <InfoContainer />
+      </div>
+    </Layout>
+  )
 )
 
 /**

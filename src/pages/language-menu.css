@@ -1,0 +1,23 @@
+.language-menu {
+    display: flex;
+    justify-content: center;
+    position: center;
+    margin-top: -20px;
+    margin-left: 800px;
+  }
+  
+  .language-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content:center ;
+  }
+  
+  .language-menu li {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .language-menu li:hover {
+    text-decoration: underline;
+  }
+  

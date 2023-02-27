@@ -1,50 +1,26 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const UsingSSR = ({ serverData }) => {
+const ContactPage = () => {
   return (
-    <Layout>
-      <h1>
-        This page is <b>Contact</b>
-      </h1>
-    
-      <img
-        style={{ width: "320px", borderRadius: "var(--border-radius)" }}
-        alt="A random dog"
-        src={serverData.message}
-      />
-      <p>
-        This page is rendered server side every time the page is requested.
-        Reload it to see a(nother) random photo from{" "}
-        <code>dog.ceo/api/breed/shiba/images/random</code>:
-      </p>
-      
-      <Link to="/">Go back to the homepage</Link>
-    </Layout>
+    <div>
+      <h1>Contact Us</h1>
+      <form>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   )
 }
 
-export const Head = () => <Seo title="Using SSR" />
-
-export default UsingSSR
-
-export async function getServerData() {
-  try {
-    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
-    if (!res.ok) {
-      throw new Error(`Response failed`)
-    }
-    return {
-      props: await res.json(),
-    }
-  } catch (error) {
-    return {
-      status: 500,
-      headers: {},
-      props: {},
-    }
-  }
-}
+export default ContactPage

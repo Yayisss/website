@@ -1,0 +1,29 @@
+ .container {
+  margin: 2rem;
+  text-align: center;
+ }
+
+ .appList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+
+ .appList li {
+  margin: 1rem;
+ }
+
+ .appList li a {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+ }
+
+ .appList li a:hover {
+  color: #666;
+  border-bottom-color: #666;
+ }

@@ -1,8 +1,12 @@
 .header {
-    background-color: #E8F3F1;
-    padding: 30px;
-    width: 100%;
-    height: 100%;
+    background-color: #a0d0c7;
+    padding: 8px;
+    position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:auto;
+	left:0; right:0; top:0;
+  min-width :100%;
      ;
   }
   
