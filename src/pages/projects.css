@@ -1,3 +1,9 @@
 .contenedorInfo {
     margin-left: 150px;
 }
+.botonCrear{
+    background-color: #A0D0C7;
+    border-radius:10%;
+    height: 30px;
+    width: 70px;
+}

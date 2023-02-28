@@ -11,18 +11,17 @@ const Container = styled.div`
   height: 100vh;
 `
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <>
+      
       <div>
         <Container>
-          <LoginForm />
+          <Register />
         </Container>
-        
       </div>
-      
     </>
   )
 }
 
-export default LoginPage
+export default RegisterPage

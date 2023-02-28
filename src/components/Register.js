@@ -1,7 +1,7 @@
 import React, { useState, useContext} from "react"
 import styled from "styled-components"
 import axios from "axios"
-import { navigate } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 const RegisterForm = styled.form`
   display: flex;
@@ -81,6 +81,8 @@ const Register = () => {
       >
         Register
       </Button>
+
+      <Link to="/login"> Log in </Link>
     </RegisterForm>
   )
       }  

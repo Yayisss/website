@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import './projects.css'
+import { Navigate } from "gatsby"
+
 const SecondPage = () => (
   <Layout>
     <div className="contenedorInfo">
@@ -13,6 +15,7 @@ const SecondPage = () => (
     <br /> <br />
     <label htmlFor="">crear proyecto</label>
     <input type="text" name="project" id="" placeholder="Ej. Proyecto 1" />
+    <button className="botonCrear"> Crear </button>
     </div>
   </Layout>
 )

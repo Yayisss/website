@@ -22,35 +22,31 @@ const Container = styled.div`
 
 const links = [
   {
-    text: "Projects",
+    text: "Project1",
     url: "/projects",
     description:
-      "crear proyectitosss",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius in mi a vulputate. Donec lobortis purus odio, at maximus nunc vulputate et.",
   },
   {
-    text: "Your language",
+    text: "Project 2",
     url: "/yourlanguage",
     description:
-      "en que idioma t hablo o q",
-  },
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius in mi a vulputate. Donec lobortis purus odio, at maximus nunc vulputate et.",  },
   {
-    text: "Contact",
+    text: "Project 3",
     url: "/contact",
     description:
-      "me kieres decir algo?",
-  },
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius in mi a vulputate. Donec lobortis purus odio, at maximus nunc vulputate et.",  },
   {
-    text: "Terms and privacy statements",
+    text: "Project 4",
     url: "/t&c",
     description:
-      "t voy a robar datos y ya aceptaste",
-  },
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius in mi a vulputate. Donec lobortis purus odio, at maximus nunc vulputate et.",  },
   {
-    text: "Other apps",
+    text: "Project 5",
     url: "/otherapps",
     description:
-      "descarga otra cosaaa",
-  },
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius in mi a vulputate. Donec lobortis purus odio, at maximus nunc vulputate et.",  },
 ]
 
 const samplePageLinks = [
@@ -99,11 +95,6 @@ const IndexPage = () => (
           </li>
         ))}
       </ul>
-      
-      <div className="patos_lugar">
-        <h1>Página de Patos</h1>
-        <InfoContainer />
-      </div>
     </Layout>
   )
 )

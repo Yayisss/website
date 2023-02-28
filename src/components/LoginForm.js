@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FiMail, FiLock } from 'react-icons/fi';
 import styled from 'styled-components';
 import { navigate} from 'gatsby';
+import { Link } from 'gatsby';
+import { handleLogin, inLoggedIn } from "../serivices/auth"
 
 const Container = styled.div`
   display: flex;
@@ -33,8 +35,19 @@ const Button = styled.button`
   padding: 8px;
   cursor: pointer;
 `;
+const Div = styled.div`
+  background-color: #0C8B77;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+ 
+`;
+
 
 const LoginForm = () => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -45,7 +58,7 @@ const LoginForm = () => {
   };
 
   return (
-    <Container>
+    <><><><Container>
       <form onSubmit={handleSubmit}>
         <InputContainer>
           <FiMail size={24} />
@@ -55,11 +68,15 @@ const LoginForm = () => {
           <FiLock size={24} />
           <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </InputContainer>
-        <Button type="submit" onClick={()=>{navigate("/")}}>
-            aaaa
+        <Button type="submit" onClick={() => { navigate("/"); } }>
+          LogIn
         </Button>
       </form>
-    </Container>
+    </Container></>
+    </><Div >
+        <Link to="/register">Register</Link>
+      </Div></>
+    
   );
 };
 

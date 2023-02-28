@@ -34,17 +34,16 @@ const Layout = ({ children }) => {
             <li>
               <Link to="/projects/" className="option">Projects</Link>
             </li>
-            <li>
-              <Link to="/yourlanguage/" className="option">Your language</Link>
-            </li>
+            
             <li>
               <Link to="/contact/" className="option">Contact</Link>
             </li>
             <li>
-              <Link to="/terms/" className="option">Terms</Link>
+              <Link to="/otherapps/" className="option">Other Apps</Link>
             </li>
+            
             <li>
-              <Link to="/privacy/" className="option">Privacy Statements</Link>
+              <Link to="/login/" className="option">Log out</Link>
             </li>
           </ul>
         </nav>
@@ -53,7 +52,7 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginLeft: `150px`,
-            marginTop: `var(--space-5)`,
+            marginTop: `0%`,
             fontSize: `var(--font-sm)`,
           }}
         >

@@ -1,8 +1,13 @@
 import React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import './contact.css'
+import { Link } from "gatsby"
 
 const ContactPage = () => {
   return (
-    <div>
+    <Layout>
+    <div className="data">
       <h1>Contact Us</h1>
       <form>
         <div>
@@ -20,6 +25,13 @@ const ContactPage = () => {
         <button type="submit">Send</button>
       </form>
     </div>
+    <br /><br />
+    <div className="back">
+    <Link to="/">Go back to the homepage</Link>
+    </div>
+    <br />
+    <br />
+   </Layout> 
   )
 }
 

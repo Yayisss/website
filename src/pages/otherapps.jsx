@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import styles from "/src/components/other-apps.module.css"
+import styles from "/src/styles/other-apps.module.css"
 
 const OtherApps = () => {
   return (
